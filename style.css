@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    display: inline;
+    color: black;
+}
+.grid-container {
+    max-width: 980px;
+    margin: auto;
+}
+nav {
+    height: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 80px;
+}
+nav .nav-logo-container img {
+    width: 220px;
+    height: auto;
+}
+nav .profile-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav .profile-link a {
+    color: black;
+    border-bottom: solid 1px black;
+    align-self: center;
+}
+header {
+    padding: 0 40px;
+}
+.home-main {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    height: 100vh;
+    background:#c2c9d370 url('/assets/img/post-3.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;    
+}
+.home-main section {
+    display: grid;
+    justify-items: center;
+    height: auto;
+    padding: 0 20px;
+}
+header .main-icons-container {
+    display: flex;
+    height: 90vh;
+}
+header .main-icons-container .icons{
+    display: grid;
+    align-self: center;
+    justify-self: center;
+}
+
+header .main-icons-container .icons a {
+    margin-top: 14px;
+   
+}
+header .main-icons-container .icons a:hover {
+    transform: scale(1.5);
+}
+.flaticon-001-facebook:hover {
+    color: #286db1;
+}
+.flaticon-002-twitter:hover {
+    color: #1c93e4; 
+}
+.flaticon-011-instagram:hover {
+    color: #f200d2;
+}
+.flaticon-010-linkedin:hover {
+    color: #0961b8;
+}
+.flaticon-008-youtube:hover {
+    color: #f20000;
+}
+header .icons span {
+    color: #c2c9d370;
+}
+
+.main-text-container {
+    align-items: center;
+}
+header .home-main-tittle {
+    font-size: 30px;
+    color: black;
+    letter-spacing: 10px;
+    text-align: center;
+    background-image: linear-gradient(90deg, transparent 5%, rgba(255, 255, 255, .6) 10%, rgba(255, 255, 255, .6) 90%, transparent 95%);
+    padding: 0 10%;
+}
+.main-text-container p {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bolder;
+    color: #c2c9d370;
+}
+
+header .home-main-button {
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(90deg, transparent 5%, rgba(255, 255, 255, .6) 10%, rgba(255, 255, 255, .6) 90%, transparent 95%);
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    border: none;
+    }
+header .home-main-button a {
+    color: black;
+    font-size: 18px;
+    font-weight: 700px; 
+}
+header .home-main-button a:hover {
+    transform: scale(1.2);
+}
+
+main {
+    padding: 0 80px;
+}
+main .about-skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.about-me,
+.my-skills,
+.services,
+.portafolio {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    color: #6d7075;
+}
+main h2 {
+    font-weight: bolder;
+}
+main h3 {
+    line-height: 2rem;
+}
+main p {
+    line-height: 2rem;
+}
+.about-me button {
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(90deg, transparent 0%, rgba(80, 77, 77, 0.6) 10%, rgba(150, 144, 144, 0.6) 90%, transparent 99%);
+    margin: 1rem 0;
+    padding: 0;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}
+.about-me button a {
+    color: white;
+    border-bottom: none;
+    align-self: center;
+}
+.skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+    text-align: center;
+    margin-top: 18.72px;
+}
+.skills-container .skill img {
+    max-height: 50px;
+    max-width: 100px;
+}
+.skills-container .skill p {
+    line-height: 0;
+    color: black;
+}
+
+.services .services-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+    text-align: center;
+    margin-top: 18.72px;
+    padding: 40px;
+}
+.services .services-container img {
+    max-height: 70px;
+    max-width: 150px;
+}
+.services .services-container h3 {
+    color: black;
+}
+
+
+
+
+@media (max-width: 480px) {
+    nav {
+        padding: 0 20px;
+    }
+    header {
+        padding: 0;
+    }
+    .home-main {
+        display: flex;
+        flex-direction: column-reverse;
+        height: 90vh;
+    }
+    header .main-icons-container {
+        display: grid;
+        height: auto;
+    }
+    header .main-icons-container .icons {
+        display: flex;
+        height: 10vh;
+    }
+    header .main-text-container {
+        height: 90vh;
+    }
+    main {
+        padding: 0 20px;
+    }
+    main .about-skills-container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .services .services-container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 18.72px;
+        padding: 0;
+    }
+
+}
