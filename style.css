@@ -6,7 +6,9 @@ body {
     margin: 0;
     padding: 0;
 }
-
+.inactive {
+    display: none;
+  }
 a {
     text-decoration: none;
     display: inline;
@@ -23,26 +25,80 @@ main {
     margin: 0 auto;
 }
 nav {
-    height: 70px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 80px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px;
+	position: sticky;
+	top: 0;
+    z-index: 5;
 }
-nav .nav-logo-container img {
-    width: 220px;
-    height: auto;
+.menu {
+    display: none;
 }
-nav .profile-link {
+.navbar-left ul,
+.navbar-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    align-items: center;
+    height: 60px;
 }
-nav .profile-link a {
-    color: black;
-    border-bottom: solid 1px black;
-    align-self: center;
+.navbar-left {
+    display: flex;
 }
+
+  .navbar-left ul li a,
+  .navbar-right ul li a
+  .navbar-right button {
+    padding: 8px;
+    border-radius: 8px;
+  }
+  .navbar-right button {
+    border-radius: 8px;
+    padding: 8px;
+    width: auto;
+    height: 50px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    border: none;
+    background-color: transparent;
+  }
+  .navbar-left ul li a:hover,
+  .navbar-right ul li a:hover,
+  .navbar-right button:hover {
+    border: 1px solid #6d7075;
+    color: #6d7075;
+  }
+
+  
+
+  /* Mobile menu */
+
+  .mobile-menu {
+    background: var(--white);
+    position: absolute;
+    top: 61px;
+    left: 0;
+    width: calc(100% - 48px);
+    padding: 0 24px;
+  }
+  .mobile-menu a {
+    font-weight: bold;
+  }
+  .mobile-menu ul {
+    padding: 0;
+    margin: 24px 0 0;
+    list-style: none;
+  }
+  .mobile-menu ul li {
+    margin-bottom: 24px;
+  }
+ 
+
+
 header {
     padding: 0 40px;
 }
@@ -50,7 +106,7 @@ header {
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
     height: 100vh;
-    background:#c2c9d370 url('/assets/img/post-3.png');
+    background: url('/assets/img/post-3.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -327,6 +383,30 @@ main p {
     }
     
 }
+
+
+@media (max-width: 640px) {
+    .menu {
+      display: block;
+    }
+    .navbar-left ul {
+      display: none;
+    }
+    .navbar-email {
+      display: none;
+    }
+    .desktop-menu {
+        display: none;
+    }
+  }
+
+  @media (min-width: 641px) {
+    .mobile-menu {
+        display: none;
+    }
+  }
+
+
 
 @media (max-width: 480px) {
     nav {
