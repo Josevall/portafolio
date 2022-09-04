@@ -16,6 +16,12 @@ a {
     max-width: 980px;
     margin: auto;
 }
+nav,
+main {
+    max-width: 1200px;
+    justify-content: center;
+    margin: 0 auto;
+}
 nav {
     height: 70px;
     display: grid;
@@ -55,6 +61,9 @@ header {
     justify-items: center;
     height: auto;
     padding: 0 20px;
+    max-width: 1200px;
+    justify-content: center;
+    margin: 0 auto;
 }
 header .main-icons-container {
     display: flex;
@@ -130,20 +139,17 @@ header .home-main-button a:hover {
 
 main {
     padding: 0 80px;
-}
-main .about-skills-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-.about-me,
-.my-skills,
-.services,
-.portafolio {
     display: flex;
     flex-direction: column;
     margin-top: 2rem;
     color: #6d7075;
 }
+main .about-skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2rem;
+}
+
 main h2 {
     font-weight: bolder;
 }
@@ -170,6 +176,7 @@ main p {
     border-bottom: none;
     align-self: center;
 }
+
 .skills-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -202,16 +209,92 @@ main p {
     color: black;
 }
 
+.portafolio {
+    margin-bottom: 4rem;
+}
+.portafolio-container-slider {
+    display: flex;
+    height: auto;
+    overflow-x: hidden;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    padding: 1rem;
+}
+.portafolio-container-card {
+    position: relative;
+    scroll-snap-align: center;
+    width: 70%;
+    min-width: 190px;
+    max-width: 300px;
+    height: 400px;
+    margin: 50px 5px 0;
+    padding: 0 15px;
+    background-color: var(--just-white);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
+}
 
+.portafolio-card-tittle {
+    padding-top: 30px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: black;
+}
 
+.portafolio-card-info {
+    font-size: 1.2rem;
+    color: #757575;
+}
+.website {
+    width: 150px;
+    height: 48px;
+    position: absolute;
+    bottom: -15px;
+    background-color: linear-gradient(90deg, transparent 0%, rgba(80, 77, 77, 0.6) 10%, rgba(150, 144, 144, 0.6) 90%, transparent 99%);
+    border-radius: 4px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.8rem; 
+    border: none;
+    left: calc(50% - 80px);
+    cursor: pointer;
+}
 
-@media (max-width: 480px) {
-    nav {
-        padding: 0 20px;
+.one {
+    background-image: url(./assets/img/batabit-desktop.png);
+}
+.two {
+    background-image: url(./assets/img/cake-shop-desktop.png);
+}
+.three {
+    background-image: url(./assets/img/YardSale-Tienda-online-mobile.png);
+}
+.four {
+    background-image: url(./assets/img/Travels.png);
+}
+.one,
+.two,
+.three,
+.four {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+.portafolio-container-card:hover {
+    max-width: 50%;
+    max-height: 50%;
+    padding: 20px 40px;
+}
+
+@media (max-width: 1100px) {
+    .portafolio-container-slider {
+        overflow-x: scroll;
     }
-    header {
-        padding: 0;
-    }
+}
+@media (max-width: 840px) {
     .home-main {
         display: flex;
         flex-direction: column-reverse;
@@ -229,19 +312,35 @@ main p {
         height: 90vh;
     }
     main {
-        padding: 0 20px;
+        padding: 0 40px;
+    }
+    .services .services-container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
     }
     main .about-skills-container {
         display: flex;
         flex-direction: column;
     }
+    .skills-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
     
-    .services .services-container {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        margin-top: 18.72px;
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 0 20px;
+    }
+    header {
         padding: 0;
     }
-
+   
+    main {
+        padding: 0 20px;
+    }
+    
+    
 }
