@@ -111,7 +111,7 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-blend-mode: darken;    
+    background-blend-mode: lighten;    
 }
 .home-main section {
     display: grid;
