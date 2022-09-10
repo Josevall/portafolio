@@ -10,21 +10,58 @@
 </head>
 <body class="home-body">
     <nav>
-        <section class="nav-logo-container">
-           
-        </section>
-        <section class="profile-link">
-            <a href="./">Download CV</a>
-        </section>
-    </nav>
+        <img src="./assets/img/menu.png" alt="menu" class="menu">
+        <div class="navbar-left">
+          <ul>
+            <li>
+              <a href="#aboutme">About me</a>
+            </li>
+            <li>
+              <a href="#myskills">Skills</a>
+            </li>
+            <li>
+              <a href="#services">Services</a>
+            </li>
+            <li>
+              <a href="#portafolio">Portafolio</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="navbar-right profile-link">
+            <button>
+                <a href="./">Download CV</a>
+            </button>
+        </div>
+        <div class="mobile-menu inactive">
+            <ul>
+              <li>
+                <a href="#aboutme">About me</a>
+              </li>
+              <li>
+                <a href="#myskills">Skills</a>
+              </li>
+              <li>
+                <a href="#services">Services</a>
+              </li>
+              <li>
+                <a href="#portafolio">Portafolio</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+        </div>
+      </nav>
     <header class="home-main">
         <section class="main-icons-container">
             <div class="icons">
-                <a href="/"><span class="flaticon-001-facebook"></span></a>
-                <a href="/"><span class="flaticon-002-twitter"></span></a>
-                <a href="/"><span class="flaticon-011-instagram"></span></a>
-                <a href="/"><span class="flaticon-010-linkedin"></span></a>
-                <a href="/"><span class="flaticon-008-youtube"></span></a>
+                <a href="https://linkedin.com/in/jose-valles-087a3b235" target="_blank"><span class="flaticon-010-linkedin"></span></a>
+                <a href="https://wa.me/584121442900" target="_blank"><span class="flaticon-003-whatsapp"></span></a>
+                <a href="mailto:josevalles9314@gmail.com" target="_blank"><span class="flaticon-002-twitter"></span></a>
+                <a href="https://github.com/Josevall" target="_blank"><span class="flaticon-011-instagram"></span></a>
             </div>
         </section>
         <section class="main-text-container">
@@ -32,14 +69,13 @@
                 <h1 class="home-main-tittle">I'm Jose<br> Freelancer frontend Developer</h1>
                 <p>Welcome to my website! <br> Here you will find some <br>of my work, I hope you enjoy it!</p>
             </div>
-            
             <button class="home-main-button">
-                <a href="/perfil.html">About Me</a>
+                <a href="#aboutme">About Me</a>
             </button>
         </section>    
     </header>
     <main>
-        <h2>About me</h2>
+        <h2 id="aboutme">About me</h2>
         <div class="about-skills-container">
             <section class="about-me">
                 <h3>Hello! I'm Jose Valles, Frontend Developer and Economist</h3>
@@ -48,8 +84,7 @@
                     <a href="./">Download CV</a>
                 </button>
             </section>
-            
-            <section class="my-skills">
+            <section id="myskills" class="my-skills">
                 <h3>My Skills</h3>
                 <div class="skills-container">
                     <div class="skill">
@@ -79,8 +114,7 @@
                 </div>
             </section>
         </div>
-        
-        <section class="services">
+        <section id="services" class="services">
             <h2>Services</h2>
             <h3>What do I offer to my clients?</h3>
             <div class="services-container">
@@ -111,7 +145,7 @@
                 </div>
             </div>
         </section>
-        <section class="portafolio">
+        <section id="portafolio" class="portafolio">
             <h2>Portafolio</h2>
             <p>In this section you can find the projects I have been working on, as well as challenges that I have found on the web and workshops that I have done.</p>
             <div class="portafolio-container-slider">
@@ -119,7 +153,6 @@
                     <div class="portafolio-info-container">
                         <a href="https://josevall.github.io/responsive-design-mobile-first/"><button class="website">Website</button></a>
                     </div>
-                    <div class="background"></div>
                 </article>
                 <article class="portafolio-container-card two">
                     <div class="portafolio-info-container">
@@ -138,8 +171,39 @@
                 </article>
             </div>
         </section>
-    </main>
-    
+        <section id="contact" class="contact">
+            <h2>Contact</h2>
+            <p>If you want us to work together:</p>
 
+            <div class="contact-items">
+                <a href="mailto:josevalles9314@gmail.com" target="_blank">
+                    <div class="contact-link">
+                        <img src="./assets/img/gmail.png" alt="mail-logo">
+                        <p>Mail me</p>
+                    </div>
+                </a>
+                <a href="https://linkedin.com/in/jose-valles-087a3b235" target="_blank">
+                    <div class="contact-link">
+                        <img src="./assets/img/linkedin.png" alt="linkedin-logo">
+                        <p>Contact me</p>
+                    </div>
+                </a>
+                <a href="https://github.com/Josevall" target="_blank">
+                    <div class="contact-link">
+                        <img src="./assets/img/github.png" alt="linkedin-logo">
+                        <p>Follow me</p>
+                    </div>
+                </a>
+                <a href="https://wa.me/584121442900" target="_blank">
+                    <div class="contact-link">
+                        <img src="./assets/img/whatsapp.png" alt="whatsapp-logo">
+                        <p>Message me</p>
+                    </div>
+                </a>
+            </div>
+
+        </section>
+    </main>
+<script src="./script.js"></script>
 </body>
 </html>
